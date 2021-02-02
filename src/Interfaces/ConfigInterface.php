@@ -16,11 +16,12 @@ interface ConfigInterface
      * Load configuration.
      *
      * @param string|null $profile
+     * @param string|null $overrides
      * @param bool $force
      *
      * @return  bool
      */
-    public function load(?string $profile = null, bool $force = false): bool;
+    public function load(?string $profile = null, ?string $overrides = null, bool $force = false): bool;
 
     /**
      * Determine if the given configuration value exists.
